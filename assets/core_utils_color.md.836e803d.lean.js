@@ -1,0 +1,1 @@
+import{_ as e,c as o,o as t}from"./chunks/framework.e2d10ea7.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"core/utils/color.md","filePath":"core/utils/color.md"}'),r={name:"core/utils/color.md"};function c(a,s,n,l,i,p){return t(),o("div")}const m=e(r,[["render",c]]);export{d as __pageData,m as default};
