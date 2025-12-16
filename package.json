@@ -1,0 +1,45 @@
+{
+  "name": "ocean-of-knowledge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs --host localhost --port 8086",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs --port 8080",
+    "start": "npm run docs:dev",
+    "build": "npm run docs:build",
+    "serve": "npm run docs:serve",
+    "deploy": "deploy.sh",
+    "install": "node ternimal-code.cjs install",
+    "push": "node ternimal-code.cjs push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:stylepicasso/ocean-of-knowledge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@styleofpicasso/vue-core": "0.0.22",
+    "@styleofpicasso/vue-pages": "0.0.26",
+    "@styleofpicasso/vue-shared": "0.0.17",
+    "@styleofpicasso/vue-theme": "0.0.21",
+    "@types/node": "^20.4.2",
+    "@types/shelljs": "^0.8.15",
+    "echarts": "^5.4.3",
+    "echarts-liquidfill": "^3.1.0",
+    "element-plus": "^2.3.9",
+    "node-sass": "^8.0.0",
+    "pinia": "^2.1.6",
+    "sass": "^1.63.6",
+    "vitepress": "^1.0.0-beta.5",
+    "vue": "^3.3.4",
+    "vxe-table": "^4.4.7",
+    "xe-utils": "^3.5.11"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.5"
+  }
+}

@@ -1,0 +1,32 @@
+---
+layout: home
+
+title: Ocean Of Knowledge
+titleTemplate: 一个Vue3组件库
+
+hero:
+  name: 知识库
+  text: 一个前端知识库
+  tagline: 适用于前端同学一起学习使用的地方
+  image:
+    src: /img/logo.png
+    alt: Ocean Of Knowledge
+  actions:
+    - theme: brand
+      text: 开始
+      link: https://gitee.com/stylepicasso
+    - theme: alt
+      text: 在 Gitee 上查看
+      link: https://gitee.com/stylepicasso/vue-vite-web
+
+features:
+  - icon: 💡
+    title: 前端知识库
+    details: 基于前端的各种知识点
+  - icon: 📦
+    title: 可直接学习
+    details: 倾向于各种知识点
+  - icon: 🛠️
+    title: 按需查找
+    details: 每个知识点都有自己的模块
+---
