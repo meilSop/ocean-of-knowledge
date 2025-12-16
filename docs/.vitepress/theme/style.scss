@@ -1,0 +1,94 @@
+:root {
+    --vp-layout-max-width: 1920px;
+}
+
+.VPDoc.has-aside .content-container {
+  max-width: 100% !important;
+}
+
+// @import 'element-plus/theme-chalk/src/index.scss';
+// @import '@icon-park/vue-next/styles/index.css';
+// @import 'vxe-table/lib/style.css';
+
+// @import '@styleofpicasso/vue-theme/es/components/style.css';
+// @import '@styleofpicasso/vue-pages/es/dist/style.css';
+// @import '@styleofpicasso/vue-shared/es/dist/style.css';
+
+@import './configs/reset';
+
+// 表格中单选框/复选框的大小
+.vxe-table--render-default .vxe-cell--checkbox .vxe-checkbox--icon,
+.vxe-table--render-default .vxe-cell--radio .vxe-radio--icon {
+  font-size: var(--el-font-size-base) !important;
+}
+
+// 表格中单选框/复选框的颜色
+.vxe-table--render-default .is--checked.vxe-cell--checkbox .vxe-checkbox--icon,
+.vxe-table--render-default .is--indeterminate.vxe-cell--checkbox .vxe-checkbox--icon,
+.vxe-table--render-default .is--checked.vxe-cell--radio .vxe-radio--icon {
+  color: var(--el-color-primary) !important;
+}
+
+// 表格中单选框/复选框的颜色移入的颜色
+.vxe-icon-checkbox-unchecked:before {
+  &:hover {
+    color: var(--el-color-primary) !important;
+  }
+}
+
+.vxe-table--render-default .vxe-header--column:not(.col--ellipsis),
+.vxe-table--render-default .vxe-body--column:not(.col--ellipsis),
+.vxe-table--render-default .vxe-footer--column:not(.col--ellipsis) {
+  padding: 9px 0 !important;
+}
+
+// 表格列高的限制
+.vxe-table--render-default .vxe-header--column.col--ellipsis,
+.vxe-table--render-default .vxe-body--column.col--ellipsis,
+.vxe-table--render-default .vxe-footer--column.col--ellipsis,
+.vxe-table--render-default.vxe-editable .vxe-body--column {
+  height: 40px !important;
+}
+
+/* 对vitePress中表格样式的格式化 */
+.vp-doc .m_header_table th {
+  color: inherit !important;
+  background-color: inherit !important;
+}
+
+.vp-doc th,
+.vp-doc td {
+  padding: 0 10px !important;
+  border: none;
+  border-right: 1px solid rgba(60, 60, 67, 0.12);
+  min-height: 30px;
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.vp-doc table {
+  display: table !important;
+  margin: 0 !important;
+  border: 1px solid rgba(60, 60, 67, 0.12);
+  tr {
+    display: flex;
+  }
+}
+
+.vp-doc tr:nth-child(2n) {
+  background-color: #fff;
+}
+
+// 对ul,li标签的样式重构
+ul, li {
+  list-style: disc;
+}
+
+table {
+  width: 100%;
+}

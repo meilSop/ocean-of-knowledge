@@ -1,0 +1,1 @@
+import{_ as e,c as r,o as a,V as t}from"./chunks/framework.e2d10ea7.js";const f=JSON.parse('{"title":"组件库简介","description":"","frontmatter":{},"headers":[],"relativePath":"guide/index.md","filePath":"guide/index.md"}'),l={name:"guide/index.md"},i=t("",5),n=[i];function o(h,s,u,c,p,_){return a(),r("div",null,n)}const g=e(l,[["render",o]]);export{f as __pageData,g as default};

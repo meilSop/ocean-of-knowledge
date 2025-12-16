@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as c}from"./chunks/framework.e2d10ea7.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"core/utils/cache.md","filePath":"core/utils/cache.md"}'),a={name:"core/utils/cache.md"};function r(o,s,n,i,p,_){return c(),t("div")}const m=e(a,[["render",r]]);export{l as __pageData,m as default};
