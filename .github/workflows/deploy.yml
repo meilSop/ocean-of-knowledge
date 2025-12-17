@@ -50,26 +50,22 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # 确保这是你的构建输出路径
           path: docs/.vitepress/dist
           # ⭐ 添加唯一名称，避免冲突（使用 GitHub 提供的唯一标识符）
           name: github-pages-${{ github.run_id }}
   
   # Single deploy job since we're just deploying
   deploy:
+    needs: build  # 确保在 build 完成后执行
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
