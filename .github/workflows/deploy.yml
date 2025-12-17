@@ -61,3 +61,9 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Show Deployment URL
+        run: |
+          echo "🌐 GitHub Pages URL:"
+          echo "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+          echo ""
+          echo "📦 部署完成！访问以上地址查看你的站点。"
