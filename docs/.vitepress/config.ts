@@ -13,7 +13,7 @@ export default () => {
     titleTemplate: '我的知识海洋', // 标题后缀模板
     lang: 'cn-ZH',
     description: '主要值基于vue3.0 + vite + pinia + vue-i18n 封装的前端管理平台的框架', // 项目描述
-    base: process.env.NODE_ENV === 'production' ? '/ocean-of-knowledge/' : '/', // 项目文件路径的， 可以通过 $withBase 进行操作
+    base: '/ocean-of-knowledge/', // 项目文件路径的， 可以通过 $withBase 进行操作
     outDir: '.vitepress/dist',
     appearance: true, // 是否展示皮肤切换按钮
     // lastUpdated: true,  // 显示最新更新时间

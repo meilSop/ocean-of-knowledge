@@ -1,1 +1,0 @@
-import{_ as s,c as n,o as a,V as l}from"./chunks/framework.e2d10ea7.js";const u=JSON.parse('{"title":"ICON 图标库","description":"","frontmatter":{},"headers":[],"relativePath":"guide/icon.md","filePath":"guide/icon.md"}'),e={name:"guide/icon.md"},o=l("",12),p=[o];function t(c,r,i,D,y,F){return a(),n("div",null,p)}const m=s(e,[["render",t]]);export{u as __pageData,m as default};
