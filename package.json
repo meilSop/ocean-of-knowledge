@@ -7,10 +7,10 @@
   "scripts": {
     "docs:dev": "vitepress dev docs --host localhost --port 8086",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs --port 8080",
+    "docs:preview": "vitepress preview docs --port 8080",
     "start": "npm run docs:dev",
     "build": "npm run docs:build",
-    "serve": "npm run docs:serve",
+    "preview": "npm run docs:preview",
     "deploy": "deploy.sh",
     "installs": "node ternimal-code.cjs install",
     "push": "node ternimal-code.cjs push"
