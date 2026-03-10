@@ -1,23 +1,4 @@
 /*
- * @Date: 2023-08-24 09:29:47
- * @LastEditTime: 2025-04-25 16:20:16
- * @FilePath: \ocean-of-knowledge\docs\.vitepress\sidebar.config.ts
- */
-/*
- * @Author: zhumanyao zhumanyao@sungrowpower.com
- * @Date: 2023-08-24 09:29:47
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2024-07-20 17:11:18
- * @FilePath: \ocean-of-knowledge\docs\.vitepress\sidebar.config.ts
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- */
-/*
- * @Date: 2023-08-24 09:29:47
- * @LastEditors: zhumanyao
- * @LastEditTime: 2024-03-19 09:41:37
- * @FilePath: \ocean-of-knowledge\docs\.vitepress\sidebar.config.ts
- */
-/*
  * @fileName: 每个（模块）页面的左侧的侧边栏配置信息
  * @Date: 2023-03-13 14:05:02
  * @Author: manYao.zhu
@@ -191,7 +172,8 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: 'vue项目中 .env 文件的作用', link: '/work-code/vue/env' },
         { text: 'vue的h 函数的作用', link: '/work-code/vue/h' },
         { text: 'vue在html中定义代码片段', link: '/work-code/vue/code-snippet' },
-        { text: 'vue2.0中使用setup语法', link: '/work-code/vue/upgrade' }
+        { text: 'vue2.0中使用setup语法', link: '/work-code/vue/upgrade' },
+        { text: 'vue中css的语法', link: '/work-code/vue/css' }
       ],
       collapsed: false
     },
@@ -223,7 +205,10 @@ const sidebar: DefaultTheme.Sidebar = {
       text: 'JS相关的问题',
       items: [
         { text: 'JS原生代码中的细节问题', link: '/work-code/javascript/js' },
-        { text: 'Iframe的相关知识', link: '/work-code/javascript/iframe' }
+        { text: 'Iframe的相关知识', link: '/work-code/javascript/iframe' },
+        { text: 'script标签详解', link: '/work-code/javascript/script' },
+        { text: 'cookie详解', link: '/work-code/javascript/cookie' },
+        { text: 'sessionStorage储存登录信息', link: '/work-code/javascript/sessionStorage' }
       ],
       collapsed: false
     },
