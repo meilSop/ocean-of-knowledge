@@ -7,7 +7,9 @@
 
 - 当A系统通过`<iframe>`内嵌B系统时，B系统中的点击事件想要通知A系统，可以使用window.postMessage机制来实现跨窗口通信。window.postMessage允许不同源（origin）的窗口之间安全地发送消息，这非常适合用于`<iframe>`与父窗口之间的通信。
 
-- B系统中的代码
+### 子系统向父系统传递信息
+
+- B（子）系统中的代码（传递信息）
 
 ```js
 const dom = document.getElementById('someButton')
@@ -24,18 +26,21 @@ dom.onclick = () => {
                 timestamp: new Date().getTime()
             }
         };
-        // 发送消息
-        parentWindow.postMessage(messageData, 'https://a-system-domain.com');  // 这里的域名，指的是能内嵌B系统，且做交互的域名； 若相匹配所有的系统， 可以用通配符 *
-        // parentWindow.postMessage(messageData, '*')  // 可以与所有嵌B系统的系统进行交互
+        sendMessageToParent(messageData)
     }
+}
+// 发送消息
+function sendMessageToParent(message) {
+    parentWindow.postMessage(message, 'https://a-system-domain.com');  // 这里的域名，指的是能内嵌B系统，且做交互的域名； 若相匹配所有的系统， 可以用通配符 *
+    // parentWindow.postMessage(message, '*')  // 可以与所有嵌B系统的系统进行交互
 }
 ```
 
-- A系统中的代码
+- A（父）系统中的代码 （接受信息）
 
 ```js
-window.addEventListener('message', function(event) {
-    // 检查消息来源是否安全
+// 处理子系统传递的数据
+function handleChildMessage(event) {
     if (event.origin !== 'https://b-system-domain.com') {  // 这里是内嵌系统的域名
         return;
     }
@@ -46,7 +51,58 @@ window.addEventListener('message', function(event) {
         console.log('B系统中的按钮被点击了:', data.payload);
         // 在这里执行你想要的动作
     }
-}, false);
+}
+window.addEventListener('message', handleChildMessage;, false);
+
+window.removeEventListener('message', handleChildMessage;, false);
+```
+
+### 父系统向子系统传递信息
+
+- B（子）系统中的代码
+
+```js
+// 处理父系统传递的数据
+function handleParentMessage(event) {
+    if (event.origin !== 'https://a-system-domain.com') {  // 这里是内嵌系统的域名
+        return;
+    }
+    // 解析消息数据
+    var data = event.data;
+    // 确认消息类型
+    if (data.type === 'A_SYSTEM_CLICKED') {
+        console.log('A系统中的按钮被点击了:', data.payload);
+        // 在这里执行你想要的动作
+    }
+}
+
+window.addEventListener('message', handleParentMessage;, false);
+
+window.removeEventListener('message', handleParentMessage;, false);
+```
+
+- A（父）系统中的代码
+
+```js
+// iframe加载成功
+function iframeLoaded() {
+    this.iframeIsload = true
+    // 初始化传递数据
+    const message = {
+        type: 'INIT_PAGE',
+        data: {}
+    }
+    this.sendMessageToChild(message)
+}
+
+// 发送信息
+function sendMessageToChild(message) {
+    if (!this.iframeIsload || !this.$refs.iframeRef) {
+        return this.$message.error('iframe未准备就绪，请稍后重试')
+    }
+    const content = this.$refs.iframeRef?.contentWindow
+    content.postMessage(message, 'https://b-system-domain.com')
+}
 ```
 
 ## A应用通过 ifrmae 内嵌B应用， 导致B系统的统一认证页面请求接口的 cookie里的session丢失
