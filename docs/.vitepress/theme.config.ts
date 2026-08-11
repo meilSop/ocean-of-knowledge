@@ -18,14 +18,24 @@ const nav: DefaultTheme.NavItem[] = [
   {
     text: 'vue相关',
     items: [
-      { text: "基础知识", link: '/knowledge-module/vue/base/'},
+      { text: '基础知识', link: '/knowledge-module/vue/base/' },
       { text: '相关插件', link: '/knowledge-module/vue/plugin/markdown/' },
       { text: '相关技术库', link: '/knowledge-module/vue/library/vitepress/' }
     ]
   },
   {
+    text: '后端架构',
+    items: [
+      { text: '学习计划', link: '/backend/' },
+      { text: '基础工具安装', link: '/backend/install/jdk8' }
+    ]
+  },
+  {
     text: '技术要点',
-    items: [{ text: '语法编译', link: '/knowledge-module/grammar-compile/markdown/' }]
+    items: [
+      { text: '语法编译', link: '/knowledge-module/grammar-compile/markdown/' },
+      { text: 'AI知识', link: '/ai/base' }
+    ]
   },
   {
     text: '知识模块',
@@ -44,10 +54,10 @@ const nav: DefaultTheme.NavItem[] = [
   {
     text: 'FEA_知识库',
     items: [
-      {text: '前端机构师_知识库', link: '/front-end-architects/system/'},
-      {text: 'CSS知识库', link: '/front-end-architects/css/preprocessor/'},
-      {text: '前端面试题', link: '/front-end-architects/interview/'},
-      {text: '微前端', link: '/front-end-architects/micro-front-end/'}
+      { text: '前端机构师_知识库', link: '/front-end-architects/system/' },
+      { text: 'CSS知识库', link: '/front-end-architects/css/preprocessor/' },
+      { text: '前端面试题', link: '/front-end-architects/interview/' },
+      { text: '微前端', link: '/front-end-architects/micro-front-end/' }
     ]
   },
   {

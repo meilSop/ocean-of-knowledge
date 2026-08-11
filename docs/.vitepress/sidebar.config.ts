@@ -79,6 +79,33 @@ const sidebar: DefaultTheme.Sidebar = {
       items: [{ text: 'markdown语法编译', link: '/knowledge-module/grammar-compile/markdown/' }]
     }
   ],
+  '/ai/': [
+    {
+      text: 'AI知识',
+      items: [{ text: 'AI基础知识', link: '/ai/base' }]
+    }
+  ],
+  '/backend/': [
+    {
+      text: '学习计划',
+      items: [{ text: '后端架构师的学习计划', link: '/backend/' }]
+    },
+    {
+      text: '基础工具安装',
+      items: [
+        { text: 'JDK8 + IDEA的安装', link: '/backend/install/' },
+        { text: 'Maven的安装与配置', link: '/backend/install/maven' },
+        { text: 'MySql的安装与配置', link: '/backend/install/mysql' },
+        { text: 'Redis的安装与配置', link: '/backend/install/redis' },
+        { text: 'Nginx的安装与配置', link: '/backend/install/nginx' },
+        { text: 'Docker的安装与配置', link: '/backend/install/docker' }
+      ]
+    },
+    {
+      text: 'Java基础知识',
+      items: [{ text: 'Java的基础语法的注意点', link: '/backend/java/' }]
+    }
+  ],
   // 组件的配置信息
   // '/components/': [
   //   { text: 'my-button 按钮', link: '/components/button/' },

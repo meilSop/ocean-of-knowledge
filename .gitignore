@@ -4,3 +4,4 @@ docs/dist
 docs/.vitepress/dist
 docs/.vitepress/cache/deps
 yarn-error.log
+.mcp.json

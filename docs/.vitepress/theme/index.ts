@@ -1,11 +1,11 @@
 /*
- * @fileName: 
+ * @fileName:
  * @Date: 2023-07-14 11:05:16
  * @Author: manYao.zhu
  */
-import DefaultTheme from "vitepress/theme";
+import DefaultTheme from 'vitepress/theme';
 
-import icon from '../../public/icon.png'
+import icon from '../../public/icon.png';
 
 // import { createPinia } from 'pinia'
 // import { useVxeTable } from './configs/vxe-table'
@@ -24,16 +24,16 @@ import icon from '../../public/icon.png'
 // import * as VueCore from '@styleofpicasso/vue-core'
 // import { changeTheme, watermark } from '@styleofpicasso/vue-core'
 
-import CodeExchange from './configs/code-exchange.vue'
+import CodeExchange from './configs/code-exchange.vue';
 // import { THEME_CONFIG, ROUTER_CONFIG, MENUS } from './configs/theme.config'
 
-import './style.scss'
+import './style.scss';
 
 export default {
   ...DefaultTheme,
   enhanceApp: async (ctx) => {
-    const { app } = ctx
-    DefaultTheme.enhanceApp(ctx)
+    const { app, router } = ctx;
+    DefaultTheme.enhanceApp(ctx);
     // app.use(createPinia()).use(ElementPlus).use(useVxeTable)
     // app.mixin({
     //   async mounted() {
@@ -45,20 +45,19 @@ export default {
     //     })
     //   }
     // })
-    app.component('code-exchange', CodeExchange)
+    app.component('code-exchange', CodeExchange);
     app.mixin({
       mounted() {
         // 添加logo
-        var linkd = document.querySelector('#link')
-        if (linkd) document.head.removeChild(linkd)
-        const link = document.createElement('link')
-        link.setAttribute('rel', 'icon')
-        link.setAttribute('id', 'link')
-        link.setAttribute('href', icon)
-        document.head.appendChild(link)
+        var linkd = document.querySelector('#link');
+        if (linkd) document.head.removeChild(linkd);
+        const link = document.createElement('link');
+        link.setAttribute('rel', 'icon');
+        link.setAttribute('id', 'link');
+        link.setAttribute('href', icon);
+        document.head.appendChild(link);
       }
-    })
-
+    });
 
     // const themeStore = useThemeStore()
     // // 初始化配置信息到缓存里面
@@ -109,4 +108,4 @@ export default {
     //   }
     // )
   }
-}
+};

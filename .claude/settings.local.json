@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__yapi__yapi_list_interfaces",
+      "mcp__context__context_auto_load",
+      "mcp__context__context_save"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "context",
+    "yapi"
+  ]
+}
