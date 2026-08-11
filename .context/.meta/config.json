@@ -1,0 +1,6 @@
+{
+  "version": "1.0.0",
+  "compressThreshold": 10,
+  "llmModel": "glm-5.1",
+  "createdAt": "2026-06-05T08:50:03.140Z"
+}
